@@ -1,0 +1,117 @@
+
+
+ASAN_OPTIONS=external_symbolizer_path=/usr/bin/llvm-symbolizer:alloc_dealloc_mismatch=0:allocator_may_return_null=1:halt_on_error=1:abort_on_error=1 SLOT_INDEX=1 LIBFUZZER_PYTHON_MODULE=daemon PYTHONPATH=. ./pdfium_fuzzer -fork=1 -max_len=100000 -ignore_crashes=1 -jobs=16 -dict=pdfium_fuzzer.dict -timeout=10 -rss_limit_mb=2000 ./pdf_corpus/
+
+
+ASAN_OPTIONS=external_symbolizer_path=/usr/bin/llvm-symbolizer:alloc_dealloc_mismatch=0:allocator_may_return_null=1:halt_on_error=1:abort_on_error=1 ./pdfium_fuzzer -fork=1 -max_len=100000 -ignore_crashes=1 -jobs=16 -dict=svg.dict -timeout=1 -rss_limit_mb=2000 ./minsvg/
+
+
+
+
+
+sudo apt install -y \
+  libglib2.0-0 \
+  libnspr4 \
+  libnss3 \
+  libdbus-1-3 \
+  libx11-6 \
+  libxcomposite1 \
+  libxdamage1 \
+  libxext6 \
+  libxfixes3 \
+  libxrandr2 \
+  libxrender1 \
+  libxtst6 \
+  libuuid1 \
+  libxcb1 \
+  libxcb-randr0 \
+  libxcb-render0 \
+  libxcb-shm0 \
+  libxkbcommon0 \
+  libgbm1 \
+  libxi6 \
+  libpci3 \
+  libcairo2 \
+  libharfbuzz0b \
+  libpango-1.0-0 \
+  libpangocairo-1.0-0 \
+  libpangoft2-1.0-0 \
+  libudev1 \
+  libatk1.0-0 \
+  libatk-bridge2.0-0 \
+  libasound2 \
+  libatspi2.0-0 \
+  libxshmfence1 \
+  libcups2 \
+  libpython3.10 \
+  libgcc-s1 \
+  zlib1g \
+  libpcre3 \
+  libpcre2-8-0 \
+  libffi8 \
+  libsystemd0 \
+  libmount1 \
+  libselinux1 \
+  libdrm2 \
+  libwayland-server0 \
+  libexpat1 \
+  libpng16-16 \
+  libfontconfig1 \
+  libfreetype6 \
+  libpixman-1-0 \
+  libgraphite2-3 \
+  libfribidi0 \
+  libthai0 \
+  libgssapi-krb5-2 \
+  libkrb5-3 \
+  libk5crypto3 \
+  libkrb5support0 \
+  libavahi-common3 \
+  libavahi-client3 \
+  libgnutls30 \
+  liblzma5 \
+  libzstd1 \
+  liblz4-1 \
+  libcap2 \
+  libgcrypt20 \
+  libblkid1 \
+  libbsd0 \
+  libbrotlidec1 \
+  libbrotlicommon1 \
+  libdatrie1 \
+  libp11-kit0 \
+  libidn2-0 \
+  libunistring2 \
+  libtasn1-6 \
+  libnettle8 \
+  libhogweed6 \
+  libgmp10 \
+  libgpg-error0 \
+  libmd0 \
+  libkeyutils1
+
+
+  Building dependency tree... Done
+Reading state information... Done
+Note, selecting 'libglib2.0-0t64' instead of 'libglib2.0-0'
+Note, selecting 'libatk1.0-0t64' instead of 'libatk1.0-0'
+Note, selecting 'libatk-bridge2.0-0t64' instead of 'libatk-bridge2.0-0'
+Note, selecting 'libatspi2.0-0t64' instead of 'libatspi2.0-0'
+Note, selecting 'libcups2t64' instead of 'libcups2'
+Note, selecting 'libpng16-16t64' instead of 'libpng16-16'
+Note, selecting 'libgnutls30t64' instead of 'libgnutls30'
+Note, selecting 'libnettle8t64' instead of 'libnettle8'
+Note, selecting 'libhogweed6t64' instead of 'libhogweed6'
+Package libasound2 is a virtual package provided by:
+  libasound2t64 1.2.11-1ubuntu0.1 (= 1.2.11-1ubuntu0.1)
+  liboss4-salsa-asound2 4.2-build2020-1ubuntu3
+You should explicitly select one to install.
+
+E: Unable to locate package libnssutil3
+E: Unable to locate package libsmime3
+E: Package 'libasound2' has no installation candidate
+E: Unable to locate package libbrotlidec1
+E: Unable to locate package libbrotlicommon1
+E: Unable to locate package libunistring2
+sontapaa_jokulainen@vm-backup-20251119-235603:~/svg_fuzz$ Y
+-bash: Y: command not found
